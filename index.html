@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Mental health and anxiety, from the middle of it. UGC creator for brands, Sydney.">
+<meta name="theme-color" content="#D4FF3A">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="made.by.julz">
+<meta property="og:description" content="Mental health and anxiety, from the middle of it. UGC creator for brands, Sydney.">
+<meta property="og:url" content="https://julianansell326.github.io/madebyjulz.github.io/">
+<meta property="og:image" content="https://julianansell326.github.io/madebyjulz.github.io/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>made.by.julz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@500&family=Space+Mono&display=swap">
+<style>
+/* Layout: one phone-width column on lime, the avatar on top, square ink buttons stacked like overlay bars. Single committed look from the made.by.julz brand book. */
+:root {
+  --lime: #D4FF3A; --ink: #111111; --paper: #F2F0EB; --muted: #3A3A36; --rec: #FF3B30;
+  --display: "Space Grotesk", system-ui, sans-serif;
+  --body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --mono: "Space Mono", ui-monospace, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { background: var(--lime); color: var(--ink); font-family: var(--body); padding-inline: 16px; }
+.col { max-width: 440px; margin: 0 auto; padding-block: 48px 40px; display: flex; flex-direction: column; gap: 28px; }
+.who { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+.mark { width: 96px; height: 96px; border-radius: 50%; background: var(--ink); color: var(--lime); display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 52px; letter-spacing: -0.06em; }
+h1 { font-family: var(--display); font-weight: 700; font-size: 30px; letter-spacing: -0.02em; margin: 0; }
+.bio { margin: 0; font-size: 16px; line-height: 1.45; max-width: 32ch; }
+.status { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 8px; }
+.status::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--rec); }
+.links { display: flex; flex-direction: column; gap: 12px; }
+.links a { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--ink); color: var(--lime); text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 18px; padding: 18px 20px; min-height: 56px; }
+.links a span { font-family: var(--mono); font-weight: 400; font-size: 12px; text-transform: uppercase; color: var(--paper); }
+.links a.alt { background: transparent; color: var(--ink); border: 3px solid var(--ink); }
+.links a.alt span { color: var(--muted); }
+.links a:hover { transform: translateY(-1px); }
+.links a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.mail { border: 2px dashed var(--ink); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+.mail .label { font-family: var(--mono); font-size: 12px; text-transform: uppercase; }
+.mail .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.mail .addr { font-family: var(--display); font-weight: 500; font-size: 17px; user-select: all; word-break: break-all; min-width: 0; }
+.mail button { font-family: var(--display); font-weight: 700; font-size: 14px; background: var(--ink); color: var(--lime); border: 0; padding: 10px 14px; cursor: pointer; }
+footer { text-align: center; font-family: var(--mono); font-size: 11px; text-transform: uppercase; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .links a:hover { transform: none; } }
+</style>
+</head>
+<body>
+
+
+<div class="col">
+  <div class="who">
+    <div class="mark" aria-hidden="true">J.</div>
+    <h1>made.by.julz</h1>
+    <p class="bio">Mental health and anxiety, from the middle of it. UGC creator for brands. Co-starring Molly, my golden retriever. Sydney.</p>
+    <span class="status">Taking briefs</span>
+  </div>
+
+  <nav class="links" aria-label="Links">
+    <a href="work.html">See my work <span>Portfolio</span></a>
+    <a href="work.html#contact">Work with me <span>Send a brief</span></a>
+    <a class="alt" href="https://madebyjulz.substack.com">Substack <span>Read</span></a>
+    <a class="alt" href="https://www.instagram.com/made.by.julz">Instagram <span>@made.by.julz</span></a>
+    <a class="alt" href="#">[Latest video] <span>New</span></a>
+  </nav>
+
+  <div class="mail">
+    <span class="label">Brands, email me</span>
+    <div class="row">
+      <a class="addr" id="addr" href="mailto:ansell.julian@gmail.com?subject=UGC%20brief" style="color:inherit">ansell.julian@gmail.com</a>
+      <button type="button" id="copy">Copy</button>
+    </div>
+  </div>
+
+  <footer>made.by.julz · Sydney, Australia</footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var btn = this, el = document.getElementById('addr');
+  function done(m) { btn.textContent = m; setTimeout(function () { btn.textContent = 'Copy'; }, 1800); }
+  function sel() { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected'); }
+  if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(el.textContent.trim()).then(function () { done('Copied'); }, sel); } else { sel(); }
+});
+</script>
+
+</body>
+</html>
